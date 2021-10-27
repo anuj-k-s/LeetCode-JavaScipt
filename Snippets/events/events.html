@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./events.js" defer></script>
+    <style>
+      .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+      }
+      .button-bar {
+        padding: 20px 0;
+        box-sizing: 1px solid blue;
+      }
+      #superparent{
+          height: 400px;
+          width: 400px;
+          border: 1px solid blue;
+          position: relative;
+      }
+      #parent{
+          position:absolute;
+          top:0;
+          left:0;
+          bottom:0;
+          right:0;
+          margin:auto;
+          height: 250px;
+          width: 250px;
+          border: 1px solid green;
+      }
+      #child{
+          position: relative;
+          top: 50%;
+          left: 50%;
+          height: 120px;
+          width: 120px;
+          border: 1px solid red;
+          transform: translate(-50%,-50%); /* this works with respect to itself */
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Change background color</button>
+
+    <div class="wrapper">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <div class="button-bar">
+      <button data-color="red">Red</button>
+      <button data-color="yellow">Yellow</button>
+      <button data-color="green">Green</button>
+      <button data-color="purple">Purple</button>
+    </div>
+
+    <div id="superparent">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+  </body>
+</html>

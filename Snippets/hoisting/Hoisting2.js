@@ -1,6 +1,10 @@
-/* We cannot redeclare let and const but var can be redeclared 
+/* 
+
+We cannot redeclare let and const but var can be redeclared 
 If redeclaration happened in same level at any line , the code execution 
-phase wont execute */
+phase wont execute 
+
+*/
 
 /* 
 # var  global scope - can be used in whole window
@@ -30,7 +34,6 @@ y =20;
 # const - const is block scoped, cant be updated nor can be redeclared
  
 */
-
 
 /* 
 console.log("a") //wont print as code will break in memory allocation phase

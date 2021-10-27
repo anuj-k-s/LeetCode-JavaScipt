@@ -1,4 +1,5 @@
-// As during the memory allocation phase of code execution context, functions and variables are assigned memories
+// As during the memory allocation phase of code execution context, 
+//functions and variables are assigned memories
 // with function having whole function body and variable,x = undefined
 
 /* 

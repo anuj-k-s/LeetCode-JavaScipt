@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
     <style>
+      ol {
+        list-style-type: lower-alpha;
+      }
+      .crimson {
+        color: crimson;
+      }
       h1 {
         color: crimson;
       }
@@ -12,14 +17,38 @@
       }
     </style>
     <script src="./plainjavascript.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
     <h1>Promises at Low Level</h1>
-    <h2>Promise - The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</h2>
-    <p>Promise </p>
+    <h2>
+      Promise - The Promise object represents the eventual completion (or failure) of an asynchronous operation and its
+      resulting value.
+    </h2>
+    <p>Promise is having three states</p>
+    <ol>
+      <li>Pending</li>
+      <li>Fulfilled</li>
+      <li>Rejected</li>
+    </ol>
+    <p class="crimson">
+      If someone is saying promise is settled or resolved it means promise is either in fullfilled state or rejected
+      state but no longer in pending state.
+    </p>
+    <p> Javascript promises are eagerly evaluated, promises are not lazy</p>
+    <p>Promises are Objects</p>
+    <p>Promises consumes only one function as a argument called executor function</p>
+    
     <input type="button" value="Call1" onclick="functionRace()" />
     <input type="button" value="Call2" onclick="innerfunction()" />
+    <input type="button" value="Promise Creation" onclick="createPromise()"/>
+    <input type="button" value="Promise With Interval" onclick="promisewithInterval()"/>
+    <input type="button" value="Promise With Reject" onclick="promiseWithReject()"/>
+    <input type="button" value="All Promise" onclick="promiseAll()"/>
+    <input type="button" value="All Settled Promise" onclick="promiseAllSettled()"/>
+    <input type="button" value="Race Promise" onclick="promiseRace()"/>
+    <p id="counter"></p>
     <p id="username"></p>
   </body>
 </html>

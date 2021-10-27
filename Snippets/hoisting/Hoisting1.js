@@ -19,7 +19,7 @@ function printName() {
 
 console.log("a") // will print
 printName();
-const x = 10;
+const x = 10; // will work same for let 
 function printName() {
   console.log(x)  //ReferenceError: Cannot access 'x' before initialization [CODE BREAK]
   console.log("Printed");
